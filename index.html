@@ -54,6 +54,14 @@
         My goal is to become a skilled software engineer and use technology<br>
         to develop meaningful solutions that contribute to society.
     </p>
+    <aside>
+    <h2>What Inspires Me</h2>
+    <blockquote>
+        “The best way to predict the future is to invent it.” — Alan Kay
+    </blockquote>
+    <p>My teacher always says <q>practice beats theory</q>, so I code every day.</p>
+    <p>Book I am reading: <cite>Clean Code</cite> by Robert C. Martin</p>
+    </aside>
 </section>
 
 
@@ -189,16 +197,48 @@
 <h2>Contact</h2>
 <p>Email: <a href="mailto:biniamgirma615@gmail.com">biniamgirma615@gmail.com</a></p>
 <p>GitHub: <a href="https://github.com/Biniam-Girma-cyber" target="_blank" rel="noopener">My GitHub profile</a></p>
-<p>Linkdn:<a href="mailto:biniamgirma615@gmail.com">Linkdn Profile</a></p>
+<p>Linkdn:<a href="https://www.linkedin.com/in/biniam-tirkaso-4916363b0">Linkdn Profile</a></p>
 <a href="files/CV.pdf" download="Biniam_Girma_CV.pdf">
     Download My CV (PDF)
 </a>
-<p><a href="#top">Back to top</a></p>
+<p><strong>Connect with me</strong></p>
+<img src="images/connect-banner.png" width=620 alt="some platform images">
+<h3>Send me a message</h3>
+<form action="thank-you.html" method="get">
+    <fieldset>
+        <legend>Your Details</legend>
+        <label for="fullname">Full name:</label>
+        <input type="text" id="fullname" name="fullname">
+        <br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+    </fieldset>
+<fieldset>
+    <legend>Your Message</legend>
+    <label for="reason">Reason for contacting me:</label>
+    <select id="reason" name="reason">
+        <optgroup label="Work">
+            <option value="internship">Internship offer</option>
+            <option value="freelance">Freelance project</option>
+            <option value="job">Full-time job</option>
+        </optgroup>
+        <optgroup label="Study">
+            <option value="group-project">Group project</option>
+            <option value="tutoring">Tutoring</option>
+            </optgroup>
+            <option value="other">Other</option>
+            </select>
+            <br><br>
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="6" cols="40"></textarea>
+    </fieldset>
+        <button type="submit">Send Message</button>
+        <button type="reset">Clear</button>
+</form>
 </section>
+
 </main>
 <footer>
-   
-    <img src="images/connect-banner.png"width=620 alt="some platform images">
     <p>&copy; 2026 Biniam Girma Tirkaso. All rights reserved.</p>
 </footer>
 </html>
