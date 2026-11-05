@@ -1,0 +1,365 @@
+WEBVTT
+
+00:00:00.878 --> 00:00:05.177
+Every website can be split up into two
+parts, the front end and the back end.
+
+00:00:05.769 --> 00:00:09.494
+The front end is all the visual stuff
+you see on the webpage, the images, the
+
+00:00:09.494 --> 00:00:14.019
+text, the buttons, and the back end is
+what saves and manages your data, for
+
+00:00:14.020 --> 00:00:15.955
+example, your Amazon order history.
+
+00:00:16.519 --> 00:00:19.613
+In this video, I'm gonna explain all
+the technologies that are used in the
+
+00:00:19.618 --> 00:00:23.780
+front end of a web application, and in
+another video, we'll explore the back end.
+
+00:00:24.195 --> 00:00:24.942
+Let's get started
+
+00:00:27.035 --> 00:00:30.174
+We're gonna start with a blank
+webpage, and the first technology
+
+00:00:30.174 --> 00:00:32.341
+we're gonna look at is HTML.
+
+00:00:32.747 --> 00:00:38.683
+HTML stands for HyperText Markup Language,
+and is used to add content to our webpage.
+
+00:00:39.160 --> 00:00:42.488
+For example, I can write this
+bit of HTML to add a button.
+
+00:00:43.992 --> 00:00:48.712
+I can also add other types of content,
+like images and text, and if I write more
+
+00:00:48.733 --> 00:00:51.674
+HTML, it will add more content to my page.
+
+00:00:52.485 --> 00:00:54.483
+But you'll notice that our
+page doesn't look very good.
+
+00:00:54.986 --> 00:00:56.316
+That's where CSS comes in.
+
+00:00:56.923 --> 00:01:01.147
+CSS stands for Cascading Style
+Sheets, and based on the name,
+
+00:01:01.162 --> 00:01:03.186
+it's used to style our webpage.
+
+00:01:03.218 --> 00:01:07.027
+So it's used to make our webpage look
+good by letting us adjust colors,
+
+00:01:07.151 --> 00:01:09.602
+sizes, spacing, things like that.
+
+00:01:10.275 --> 00:01:12.062
+Let's add some CSS to our page.
+
+00:01:13.562 --> 00:01:15.967
+So now that looks much better,
+but we're not done here.
+
+00:01:16.708 --> 00:01:20.241
+Let's say that I want to filter these
+products and only show one brand of
+
+00:01:20.241 --> 00:01:24.126
+shoes, so I click this checkbox, but
+you'll notice that nothing happens,
+
+00:01:24.663 --> 00:01:26.222
+and this is where JavaScript comes in.
+
+00:01:27.007 --> 00:01:31.969
+HTML and CSS only display things
+on our webpage, but JavaScript is
+
+00:01:31.969 --> 00:01:33.889
+what makes our webpage interactive.
+
+00:01:34.789 --> 00:01:38.074
+So for example, when we click
+something and type something, a
+
+00:01:38.074 --> 00:01:41.358
+bit of JavaScript code will update
+the page based on what we did.
+
+00:01:42.775 --> 00:01:45.554
+The most important feature of
+JavaScript is something called the
+
+00:01:45.573 --> 00:01:48.019
+Document Object Model, or the DOM.
+
+00:01:48.689 --> 00:01:51.204
+The DOM allows JavaScript
+to change the webpage.
+
+00:01:51.835 --> 00:01:55.916
+For example, this bit of JavaScript
+code uses the DOM to change the
+
+00:01:55.916 --> 00:02:00.227
+text in the button, and this is how
+JavaScript makes pages interactive.
+
+00:02:00.860 --> 00:02:04.334
+However, using the DOM directly
+like this is really repetitive
+
+00:02:04.363 --> 00:02:08.168
+and hard to manage, and that's
+why we use a JavaScript framework.
+
+00:02:09.107 --> 00:02:13.312
+JavaScript frameworks give us a much
+nicer way to create our webpage, and they
+
+00:02:13.313 --> 00:02:17.248
+take care of updating the page for us,
+so we never use the DOM directly anymore.
+
+00:02:17.882 --> 00:02:20.205
+The most popular ones are React.js,
+
+00:02:20.347 --> 00:02:21.873
+Angular, and Vue.js.
+
+00:02:22.951 --> 00:02:25.437
+Now let's take a step back
+and look at JavaScript again.
+
+00:02:26.154 --> 00:02:29.024
+JavaScript as a language is
+missing a lot of features that
+
+00:02:29.064 --> 00:02:30.605
+other programming languages have.
+
+00:02:31.164 --> 00:02:34.372
+One of these features is being able
+to split up our code into different
+
+00:02:34.373 --> 00:02:36.277
+files and to organize our code.
+
+00:02:36.865 --> 00:02:39.504
+To solve this, we have to use
+something called a bundler.
+
+00:02:40.034 --> 00:02:43.176
+The most popular one you've
+probably heard of is called Webpack.
+
+00:02:43.694 --> 00:02:48.108
+Webpack lets us split up our JavaScript
+code into many different files, and
+
+00:02:48.109 --> 00:02:51.675
+once we're ready to put it on our
+website, Webpack will combine all
+
+00:02:51.675 --> 00:02:55.786
+of these files, or bundle all of
+these files, into one JavaScript
+
+00:02:55.791 --> 00:02:57.757
+file that we can put on our website.
+
+00:02:58.554 --> 00:03:01.200
+Another tool that we use
+is called a transpiler.
+
+00:03:01.664 --> 00:03:04.826
+The most popular one you probably
+heard of is called TypeScript.
+
+00:03:05.473 --> 00:03:08.598
+A transpiler adds extra
+features onto JavaScript.
+
+00:03:08.915 --> 00:03:12.663
+It lets us write an enhanced version
+of JavaScript, and then once we're
+
+00:03:12.664 --> 00:03:17.620
+done, it will transform the enhanced
+JavaScript back into normal JavaScript,
+
+00:03:17.956 --> 00:03:21.978
+because browsers like Google Chrome
+can only understand normal JavaScript.
+
+00:03:22.707 --> 00:03:25.849
+So those are the major technologies
+in the JavaScript world.
+
+00:03:26.501 --> 00:03:28.287
+Now we're gonna move over to CSS.
+
+00:03:29.077 --> 00:03:32.583
+CSS as a language has the
+same problems as JavaScript.
+
+00:03:33.016 --> 00:03:36.859
+We can't organize our code into
+different files, and CSS is missing a
+
+00:03:36.859 --> 00:03:42.132
+lot of useful features, so we also use
+a bundler and a transpiler for CSS.
+
+00:03:42.652 --> 00:03:46.332
+There's a special name for
+this called a CSS preprocessor.
+
+00:03:46.709 --> 00:03:49.777
+It's basically the combination
+of a bundler and a transpiler.
+
+00:03:50.378 --> 00:03:54.832
+The most popular CSS preprocessor
+you probably heard of is called Sass.
+
+00:03:55.519 --> 00:03:59.709
+Sass lets us organize our CSS into
+different files, and it lets us write
+
+00:03:59.743 --> 00:04:04.247
+enhanced CSS, and then it will bundle
+all of those files together into
+
+00:04:04.248 --> 00:04:09.606
+one file, and it will transform the
+enhanced CSS back into normal CSS.
+
+00:04:09.987 --> 00:04:13.890
+So you can think of it sort of like
+a bundler and a transpiler combined.
+
+00:04:14.376 --> 00:04:18.370
+Now, once we had CSS preprocessors,
+developers started to create
+
+00:04:18.697 --> 00:04:22.700
+CSS frameworks, the most
+popular one being Bootstrap.
+
+00:04:23.578 --> 00:04:27.302
+CSS frameworks are basically a whole
+bunch of CSS code that someone else
+
+00:04:27.302 --> 00:04:31.979
+wrote, and it helps us solve common
+problems, so using a framework like
+
+00:04:31.996 --> 00:04:33.885
+Bootstrap saves us a lot of time.
+
+00:04:35.204 --> 00:04:37.447
+The last thing we're gonna look
+at is how does the front end
+
+00:04:37.466 --> 00:04:38.921
+communicate with the back end?
+
+00:04:39.537 --> 00:04:42.852
+For example, let's say I'm on
+Amazon and I want to make an order.
+
+00:04:43.337 --> 00:04:46.748
+How does this order get sent
+from my computer to Amazon?
+
+00:04:47.427 --> 00:04:51.769
+JavaScript has a feature for
+this too called XML HTTP Request.
+
+00:04:52.147 --> 00:04:53.451
+It lets us send a message.
+
+00:04:53.638 --> 00:04:56.982
+In this case, we're gonna send
+our Amazon order to a URL,
+
+00:04:57.058 --> 00:04:59.519
+like amazon.com/createorder.
+
+00:05:00.014 --> 00:05:04.770
+On the other side, Amazon's back end is
+listening for these messages sent to this
+
+00:05:04.774 --> 00:05:07.307
+URL, and that's how they get our order.
+
+00:05:07.842 --> 00:05:10.794
+We're gonna talk more about this
+process in our back end video that
+
+00:05:10.794 --> 00:05:12.061
+you can find in the description.
+
+00:05:12.676 --> 00:05:16.775
+Over the years, we've improved on
+XML HTTP Request, and these days
+
+00:05:16.777 --> 00:05:21.219
+we use tools like Axios or Fetch
+to send messages to the back end.
+
+00:05:22.147 --> 00:05:24.472
+All right, so these are all
+the technologies we need
+
+00:05:24.472 --> 00:05:25.693
+to build the front end.
+
+00:05:26.102 --> 00:05:30.085
+You'll notice that it's really
+just HTML, CSS, and JavaScript.
+
+00:05:30.371 --> 00:05:34.278
+The other technologies make CSS
+and JavaScript easier to work with.
+
+00:05:34.740 --> 00:05:37.852
+Let me know in the comments how many
+of these technologies you already
+
+00:05:37.852 --> 00:05:39.674
+knew, and if anything was new to you.
+
+00:05:40.000 --> 00:05:40.715
+Thanks for watching.
+
+00:05:40.716 --> 00:05:42.708
+My name is Simon from supersimple.dev.
+
+00:05:42.784 --> 00:05:45.010
+I wanna make a tech career
+possible for anyone.
+
+00:05:45.470 --> 00:05:47.881
+You can find my contact info
+in the description, and I'll
+
+00:05:47.881 --> 00:05:48.948
+see you in the next one.
