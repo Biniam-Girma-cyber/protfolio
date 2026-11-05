@@ -13,8 +13,11 @@
     <title>Biniam Girma | Portfolio</title>
     <link rel="icon" type="image/png" href="images/favicon.png">
 </head>
-</body>
-<>
+<body>
+<canvas id="myLogo" width="120" height="120">
+    Biniam Girma logo
+</canvas>
+
 <h1>Biniam Girma Tirkaso</h1>
 <img src ="images/profile.jpg" width="300" height="300" alt="profile image with white T-shirt">
 <h2>Software Engineering Student</h2>
@@ -44,6 +47,10 @@
         passionate about technology, programming, and building solutions<br>
         that make people's lives easier.
     </p>
+<p>
+    My favourite tag is &lt;main&gt;, because it tells the browser
+    where the important content is &amp; helps screen readers.
+</p>
 
     <p>
         I have completed Full Stack Web Development training through Udacity<br>
@@ -83,7 +90,9 @@
 
 <h2 id="skills">Skills</h2>
 <ul>
-    <li>HTML</li>
+<li>
+    <abbr title="HyperText Markup Language">HTML</abbr>
+</li>
     <li>Python</li>
     <li>JavaScript</li>
     <li>C++</li>
@@ -133,6 +142,11 @@
     <label for="lvl-js">JavaScript</label>
     <meter id="lvl-js" value="0.2" min="0" max="1" low="0.3" high="0.7" optimum="1">20%</meter>
 </p>
+<h3>My Skills Bar Chart</h3>
+
+<canvas id="skillsChart" width="300" height="150">
+    A bar chart showing my programming skills.
+</canvas>
 
 <section id="project">
     <h2>Projects</h2>
@@ -154,11 +168,12 @@
 
     <h3>Bachelor of Science in Software Engineering</h3>
     <p>
-        <strong>Addis Ababa Science and Technology University (AASTU)</strong>
-        <p>
-            <label for="degree">Degree progress:</label>
-            <progress id="degree" value="40" max="100">40%</progress> 40%
-        </p>
+        <strong>
+            Addis Ababa Science and Technology University
+            (<abbr title="Addis Ababa Science and Technology University">AASTU</abbr>)
+        </strong>
+        <br>
+        <time datetime="2023-09">September 2023</time> – present
         <br>
         Addis Ababa, Ethiopia
         <br>
@@ -239,11 +254,18 @@
 </section> 
 <section id="contact">
 <h2>Contact</h2>
-<p>Email: <a href="mailto:biniamgirma615@gmail.com">biniamgirma615@gmail.com</a></p>
-<p>GitHub: <a href="https://github.com/Biniam-Girma-cyber" target="_blank" rel="noopener">My GitHub profile</a></p>
-<p>Linkdn:<a href="https://www.linkedin.com/in/biniam-tirkaso-4916363b0">Linkdn Profile</a></p>
-<a href="files/CV.pdf" download="Biniam_Girma_CV.pdf">
-    Download My CV (PDF)
+<p>Email: 
+    <a href="mailto:biniamgirma615@gmail.com">biniamgirma615@gmail.com</a></p>
+<p>
+    Phone:
+    <a href="tel:+251911223344">+251&nbsp;911&nbsp;223&nbsp;344</a>
+</p>
+<p>GitHub:
+     <a href="https://github.com/Biniam-Girma-cyber" target="_blank" rel="noopener">My GitHub profile</a></p>
+<p>Linkdn:
+    <a href="https://www.linkedin.com/in/biniam-tirkaso-4916363b0">Linkdn Profile</a></p>
+<a href="files/CV.pdf" download>
+    download my <abbr title="Curriculum Vitae">CV</abbr>
 </a>
 <p><strong>Connect with me</strong></p>
 <img src="images/connect-banner.png" width=620 alt="some platform images">
@@ -319,5 +341,80 @@ title="Map of my university campus">
 </main>
 <footer>
     <p>&copy; 2026 Biniam Girma Tirkaso. All rights reserved.</p>
+    <p>
+        Last updated:
+        <time datetime="2026-11-05">5 November 2026</time>
+    </p>
 </footer>
+<script>
+
+    const logo = document.getElementById("myLogo");
+    const logoCtx = logo.getContext("2d");
+
+ 
+    logoCtx.fillStyle = "#1f5fa8";
+    logoCtx.fillRect(0, 0, 120, 120);
+ 
+    logoCtx.beginPath();
+    logoCtx.arc(60, 60, 45, 0, Math.PI * 2);
+    logoCtx.fillStyle = "white";
+    logoCtx.fill();
+
+    
+    logoCtx.fillStyle = "#1f5fa8";
+    logoCtx.font = "bold 30px Arial";
+    logoCtx.textAlign = "center";
+    logoCtx.textBaseline = "middle";
+    logoCtx.fillText("BG", 60, 60);
+
+ 
+    const chart = document.getElementById("skillsChart");
+    const chartCtx = chart.getContext("2d");
+
+
+    const skills = [
+        { name: "HTML", value: 80 },
+        { name: "C++", value: 60 },
+        { name: "CSS", value: 50 },
+        { name: "React", value: 80 },
+        { name: "Python", value: 70 },
+        { name: "JavaScript", value: 20 }
+    ];
+
+   
+    const barWidth = 30;
+    const gap = 18;
+    const baseline = 112;
+    const scale = 0.7;
+
+    skills.forEach((skill, index) => {
+
+        const x = 10 + index * (barWidth + gap);
+        const barHeight = skill.value * scale;
+        const y = baseline - barHeight;
+ 
+        chartCtx.fillStyle = "#1f5fa8";
+        chartCtx.fillRect(x, y, barWidth, barHeight);
+
+        
+        chartCtx.fillStyle = "black";
+        chartCtx.font = "9px Arial";
+        chartCtx.textAlign = "center";
+        chartCtx.fillText(
+            skill.value + "%",
+            x + barWidth / 2,
+            y - 5
+        );
+
+        
+        chartCtx.font = "9px Arial";
+        chartCtx.fillText(
+            skill.name,
+            x + barWidth / 2,
+            128
+        );
+    });
+
+</script>
+</body>
 </html>
